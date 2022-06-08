@@ -11,7 +11,14 @@ This repository contains an empty [Unity](https://en.wikipedia.org/wiki/Unity_(g
 
 [^1]: The main issue to overcome is the problem of dealing with large (binary) files that Unity produces.]
 
-# Procedure for creating this repository
+## Getting started
+
+To use this project, clone the repository and then open it in the Unity Editor.[^2][^3] Make any desired changes to your project, and save to disk. Commit the changes as normal via a git command.
+
+[^3]: To avoid accidentally attempting to push your project to this repository, be sure to modify the [git remotes](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes), after cloning.
+
+
+## Procedure for creating this repository
 
 1. Create an empty project via Unity Hub and the Unity Editor.
 2. Initialize Git in the project root:
