@@ -191,4 +191,7 @@ file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 [ros_overlay]: https://docs.ros.org/en/humble/Tutorials/Creating-Your-First-ROS2-Package.html#source-the-setup-file
 
+[ros_environment]: https://docs.ros.org/en/humble/Tutorials/Configuring-ROS2-Environment.html#source-the-setup-files
+
+[ros_build]: https://docs.ros.org/en/humble/Tutorials/Creating-Your-First-ROS2-Package.html#build-a-package
 
