@@ -16,7 +16,13 @@ available via the [Unity Robotics Hub][robotics_hub].
 
 ## Getting started
 
-To use this project, clone the repository and then open it in the Unity Editor.[^2][^3] Make any desired changes to your project, and save to disk. Commit the changes as normal via a git command.
+This project is intended as an introduction to ROS-Unity integration, but it 
+might also be used as a template or starting point. The installation and 
+initial use are designed to be relatively straightforward. We recommend running 
+through these steps before attempting to modify the project.
+
+The repository itself is derived from the 
+[empty Unity3D project repository][empty_unity_project].
 
 
 ## Installation
@@ -194,4 +200,6 @@ file, You can obtain one at https://mozilla.org/MPL/2.0/.
 [ros_environment]: https://docs.ros.org/en/humble/Tutorials/Configuring-ROS2-Environment.html#source-the-setup-files
 
 [ros_build]: https://docs.ros.org/en/humble/Tutorials/Creating-Your-First-ROS2-Package.html#build-a-package
+
+[empty_unity_project]: https://github.com/ricmua/empty_ros_unity_3d_project
 
