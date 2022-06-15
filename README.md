@@ -121,10 +121,10 @@ installed and working.
 
 ### ROS topics
 
-This class initializes three ROS [topic] subscriptions; each for 
-manipulating a different property of the [sphere] object. Each topic name 
+The C# script in this example initializes three ROS [topic] subscriptions; each 
+for manipulating a different property of the sphere object. Each topic name 
 consists of a relative [namespace] -- determined by the name of the 
-[sphere] game object -- followed by a property identifier. Since it is 
+sphere game object -- followed by a property identifier. Since it is 
 used to determine the topic namespace, the game object must have a name 
 that agrees with ROS [naming conventions]. For example, given a Unity 
 Sphere primitive with the name ``Sphere1``, the following ROS topics would 
@@ -140,6 +140,40 @@ The message types for the topics are as follows:
 * color: [std_msgs/ColorRGBA]
 * radius: [example_interfaces/Float64]
 
+
+### Coordinate systems
+
+When a [position message] is received via the position topic subscription, 
+the 3D vector data contained in the message is first transformed, before 
+applying the new posiiton to the sphere object. This transformation is 
+necessary because ROS and Unity use different coordinate systems, by 
+default. As noted in the documentation for the [ROSGeometry] component of 
+the [ROS-TCP-Connector] package:
+
+> In Unity, the X axis points right, Y up, and Z forward. ROS, on the 
+> other hand, supports various coordinate frames: in the most 
+> commonly-used one, X points forward, Y left, and Z up. In ROS 
+> terminology, this frame is called "FLU" (forward, left, up), whereas 
+> the Unity coordinate frame would be "RUF" (right, up, forward).
+
+Instances of this class assume that incoming data uses the FLU coordinate 
+system. Vectors are converted the data to the RUF coordinate system before 
+use in the Unity scene.
+
+
+### SphereNode
+
+The [C# script](Assets/Scripts/SphereNode.cs) provided in this example is meant 
+to be [attached] to a Unity [game object] -- generally by dragging and 
+dropping in the Unity Editor. Here, it is assumed that the game object is a 
+sphere, but that is not strictly necessary.
+
+To manipulate the game object, position, color, and size modifications are 
+requested via ROS topics.
+
+[game object]: https://docs.unity3d.com/Manual/class-GameObject.html
+
+[attached]: https://docs.unity3d.com/Manual/CreatingAndUsingScripts.html
 
 License
 -------
@@ -203,4 +237,11 @@ file, You can obtain one at https://mozilla.org/MPL/2.0/.
 [ros_build]: https://docs.ros.org/en/humble/Tutorials/Creating-Your-First-ROS2-Package.html#build-a-package
 
 [empty_unity_project]: https://github.com/ricmua/empty_ros_unity_3d_project
+
+[position message]: https://github.com/ros2/common_interfaces/blob/master/geometry_msgs/msg/Point.msg
+
+[RosGeometry]: https://github.com/Unity-Technologies/ROS-TCP-Connector/blob/main/ROSGeometry.md
+
+[ROS-TCP-Connector]: https://github.com/Unity-Technologies/ROS-TCP-Connector
+ 
 
