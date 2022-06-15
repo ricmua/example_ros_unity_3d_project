@@ -17,9 +17,10 @@ available via the [Unity Robotics Hub][robotics_hub].
 ## Getting started
 
 This project is intended as an introduction to ROS-Unity integration, but it 
-might also be used as a template or starting point. The installation and 
-initial use are designed to be relatively straightforward. We recommend running 
-through these steps before attempting to modify the project.
+might also be used as a template or starting point for other projects. The 
+installation and initial use are designed to be relatively straightforward. 
+We recommend running through these steps before attempting to modify the 
+project.
 
 The repository itself is derived from the 
 [empty Unity3D project repository][empty_unity_project].
